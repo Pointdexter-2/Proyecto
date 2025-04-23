@@ -1,0 +1,72 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: Arial, sans-serif;;
+}
+
+body{
+    background-image: url(../img/fondo.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+/* Contenedor principal */
+.container {
+    max-width: 1200px; /* Ancho máximo del contenedor */
+    margin: 0 auto; /* Centra el contenedor */
+    padding: 0 50px; /* Espaciado interno */
+    padding: 20px 0;
+}
+
+/* Fila */
+.row {
+    display: flex; /* Usa flexbox para alinear los elementos */
+    align-items: center; /* Centra verticalmente los elementos */
+    justify-content: space-between; /* Espacia los elementos */
+}
+
+/* Logo */
+.logo-container {
+    flex: 1; /* Permite que el logo ocupe espacio */
+}
+
+/* Navegación */
+.nav-links {
+    flex: 1; /* Permite que la navegación ocupe más espacio */
+    display: flex; /* Usa flexbox para alinear los enlaces */
+    justify-content: center; /* Centra los enlaces */
+}
+
+.nav-links a {
+    margin: 0 15px; /* Espaciado entre enlaces */
+    text-decoration: none; /* Quita el subrayado */
+    color: #333; /* Color del texto */
+    font-weight: bold; /* Negrita */
+    transition: color 0.3s; /* Transición suave para el color */
+}
+
+.nav-links a:hover {
+    color: #007BFF; /* Cambia el color al pasar el mouse */
+}
+
+/* Redes sociales */
+.social-media {
+    flex: 1; /* Permite que el contenedor de redes sociales ocupe espacio */
+    display: flex; /* Usa flexbox para alinear los botones */
+    justify-content: flex-end; /* Alinea los botones a la derecha */
+}
+
+.social-media .btn {
+    background: none; /* Sin fondo */
+    border: none; /* Sin borde */
+    cursor: pointer; /* Cambia el cursor al pasar el mouse */
+    margin-left: 10px; /* Espaciado entre botones */
+}
+
+.social-media img {
+    width: 30px;
+}
