@@ -1,35 +1,40 @@
 *{
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    text-decoration: none;
-    font-family: Arial, sans-serif;;
+    border: 0;
+    font-size: 100%;
+    vertical-align: baseline;
 }
 
 body{
-    background-image: url(../img/fondo.jpg);
-    background-size: cover;
+    text-align: center;
+    font-family: sans-serif;
+    padding-top: 40px;
     background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed;
+    background-size: cover;
 }
 
-/* Contenedor principal */
-.container {
-    max-width: 1200px; /* Ancho máximo del contenedor */
-    margin: 0 auto; /* Centra el contenedor */
-    padding: 0 50px; /* Espaciado interno */
-    padding: 20px 0;
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-/* Fila */
 .row {
-    display: flex; /* Usa flexbox para alinear los elementos */
-    align-items: center; /* Centra verticalmente los elementos */
-    justify-content: space-between; /* Espacia los elementos */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 90px;
+    background: rgba(23, 23, 23); /* <<-- Ahora es semi-transparente */
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+    padding: 0 20px;
 }
 
-/* Logo */
+
 .logo-container {
     flex: 1; /* Permite que el logo ocupe espacio */
 }
@@ -42,16 +47,19 @@ body{
 }
 
 .nav-links a {
-    margin: 0 15px; /* Espaciado entre enlaces */
-    text-decoration: none; /* Quita el subrayado */
-    color: #333; /* Color del texto */
-    font-weight: bold; /* Negrita */
-    transition: color 0.3s; /* Transición suave para el color */
+    margin: 0 15px;
+    text-decoration: none;
+    color: #ffffff; /* <-- blanco */
+    font-weight: bold;
+    transition: color 0.3s;
+    font-size: 30px;
 }
 
+
 .nav-links a:hover {
-    color: #007BFF; /* Cambia el color al pasar el mouse */
+    color: #34782b; /* Un color bonito cuando pasas el mouse */
 }
+
 
 /* Redes sociales */
 .social-media {
@@ -68,5 +76,77 @@ body{
 }
 
 .social-media img {
-    width: 30px;
+    width: 50px;
+    filter: brightness(0) invert(1); /* <<-- Los invierte a blanco */
+}
+/*Bienvenida*/
+header{
+    background: url(../img/fondo_2.jpg) no-repeat center;
+    background-size: cover;
+}
+.content-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centra verticalmente */
+    align-items: center;     /* Centra horizontalmente */
+    height: 100vh;           /* Toda la altura de la ventana */
+    text-align: center;
+}
+
+.title {
+    margin-bottom: 40px;
+    font-size: 100px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: fa9f6e;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.content-header p {
+    margin-bottom: 40px;
+    font-size: 40px;
+    color: white;
+}
+/*Nosotros*/
+.content-nst{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    background: url(../img/fondo_3.jpg) no-repeat center;
+    background-size: cover;
+}
+
+.box-content{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.box p{
+    margin-bottom: 40px;
+    font-size: 20px;
+    color: white;
+}
+
+.box-content .box{
+    height: 18rem;
+    width: 20rem;
+    background: #ffca74;
+    text-align: center;
+    border-radius: 1rem;
+    box-shadow: 0 .3rem .5rem;
+    margin: 2rem;
+}
+
+.box-content .box img{
+    height: 3rem;
+    width: 3rem;
+    line-height: 3rem;
+    text-align: center;
+    border-radius: 50%;
+    font-size: 2rem;
+    margin: 1rem 0;
 }
