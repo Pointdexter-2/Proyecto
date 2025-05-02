@@ -1,52 +1,163 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    vertical-align: baseline;
 }
 
-body {
-  font-family: Arial, sans-serif;
-  background-color: #f8f9fa;
+body{
+    text-align: center;
+    font-family: sans-serif;
+    padding-top: 40px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
 }
 
-header {
-  background-color: #fff;
-  padding: 15px 0;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 90px;
+    background: rgba(23, 23, 23); /* <<-- Ahora es semi-transparente */
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+    padding: 0 20px;
+}
+
 
 .logo-container {
-  display: flex;
-  align-items: center;
+    flex: 1; /* Permite que el logo ocupe espacio */
 }
 
+/* Navegación */
 .nav-links {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 20px;
+    flex: 1; /* Permite que la navegación ocupe más espacio */
+    display: flex; /* Usa flexbox para alinear los enlaces */
+    justify-content: center; /* Centra los enlaces */
 }
 
 .nav-links a {
-  text-decoration: none;
-  color: #000;
-  font-weight: 600;
+    margin: 0 15px;
+    text-decoration: none;
+    color: #ffffff; /* <-- blanco */
+    font-weight: bold;
+    transition: color 0.3s;
+    font-size: 30px;
 }
 
+
+.nav-links a:hover {
+    color: #34782b; /* Un color bonito cuando pasas el mouse */
+}
+
+
+/* Redes sociales */
 .social-media {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  gap: 10px;
+    flex: 1; /* Permite que el contenedor de redes sociales ocupe espacio */
+    display: flex; /* Usa flexbox para alinear los botones */
+    justify-content: flex-end; /* Alinea los botones a la derecha */
+}
+
+.social-media .btn {
+    background: none; /* Sin fondo */
+    border: none; /* Sin borde */
+    cursor: pointer; /* Cambia el cursor al pasar el mouse */
+    margin-left: 10px; /* Espaciado entre botones */
+}
+
+.social-media img {
+    width: 50px;
+    filter: brightness(0) invert(1); /* <<-- Los invierte a blanco */
 }
 
 .card-img-top {
-  height: 250px;
-  object-fit: cover;
+    height: 250px;
+    object-fit: cover;
 }
 
 @media (max-width: 768px) {
-  .nav-links {
-    flex-direction: column;
-  }
+    .nav-links {
+        flex-direction: column;
+    }
 }
+
+/* Estilo para la sección de catálogo */
+section.container {
+    flex-direction: column; /* apila contenido verticalmente */
+    align-items: center;
+    padding: 80px 20px 40px; /* espacio superior para que no lo tape la barra fija */
+}
+
+/* Centrar título */
+section.container h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #212529;
+}
+
+section.container h2::after {
+    content: "";
+    display: block;
+    border-bottom: 2px solid #212529; /* Línea debajo del título */
+    margin-top: 15px;
+}
+
+
+
+/* Ajustes de la grilla del catálogo */
+.row.row-cols-1.row-cols-md-4.g-4 {
+    justify-content: center;
+    /* espacio entre tarjetas */
+    max-width: 1400px;
+    margin: 0 auto;
+    background: white;
+}
+
+
+/* Estilos de las tarjetas */
+.card {
+    border-radius: 15px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.03);
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Botones de comprar */
+.card .btn {
+    border-radius: 10px;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+main, section.container.py-5 {
+    padding-top: 100px; /* espacio debajo del menú fijo */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card-img-top {
+  height: 200px;
+  object-fit: cover;
+}
+
+
+
+
+
+
+
