@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Banca web</title>
+        <link rel="stylesheet" href="css/login.css">
+    </head>
+    <body>
+        <main>
+            <div class="contenedor__todo">
+                <div class="caja__trasera">
+                    <div class="caja__login">
+                        <h3>¿Ya estas registrado?</h3>
+                        <p>Inicia sesion para ingresar a tu banca por internet</p>
+                        <button id="btn_iniciar"> Ingresar</button>
+                    </div>
+                    <div class="caja__register">
+                        <h3>¿No tienes cuenta?</h3>
+                        <p>Registrate para que puedas tener tu cuenta</p>
+                        <button id="btn_registrar"> Registrarse</button>
+                    </div>
+                </div>
+                <!--formulario de login y registro-->
+                <div class="contenedor__log-reg">
+                    <!--Login-->
+                    <form action="" class="formulario_login">
+                        <h2>Iniciar Sesion</h2>
+                        <input type="text" placeholder="Documento de identidad">
+                        <input type="password" placeholder="Codigo de 6 digitos">
+                        <button>Acceder</button>
+                    </form>
+                    <!--registro-->
+                    <form action="" class="formulario_registro">
+                        <h2>Registrarse</h2>
+                        <input type="text" placeholder="Nombre completo">
+                        <input type="text" placeholder="Documento de identidad">
+                        <input type="text" placeholder="Correo electronico">
+                        <input type="password" placeholder="Contraseña">
+                        <button>Registrarse</button>
+                    </form>
+                </div>
+            </div>
+        </main>
+        <!--vincular con javascript-->
+        <script src="js/script.js"></script>
+    </body>
+</html>
